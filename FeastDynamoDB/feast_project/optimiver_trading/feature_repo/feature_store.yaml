@@ -1,0 +1,14 @@
+project: optimiver_trading
+# By default, the registry is a file (but can be turned into a more scalable SQL-backed registry)
+registry: data/registry.db
+# The provider primarily specifies default offline / online stores & storing the registry in a given cloud
+provider: aws
+online_store:
+    type: dynamodb
+    region: us-west-2 
+
+offline_store:
+    type: file
+    
+    
+entity_key_serialization_version: 2
